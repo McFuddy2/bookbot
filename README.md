@@ -1,3 +1,3 @@
 # bookbot
-my first repository on HitHib
+My first repository on GitHub
 Bookbot is my first git project!
