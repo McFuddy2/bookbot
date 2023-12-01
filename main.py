@@ -30,8 +30,24 @@ class Book:
                 else:
                     letters[letter] = 1
         return letters
+    
+
+    def book_report(self):
+        word_count = self.word_count()
+        letter_count = self.letter_count()
+        sorted_letter_count = dict(sorted(letter_count.items()))
+        print(f"--- Begin the report of {self.book_name} ---")
+        print(word_count)
+        for letter, count in sorted_letter_count.items():
+            time = "times"
+            if count != 1:
+                time = "times"
+            else:
+                time = "time"
+            print(f"The {letter} character was found {count} {time}")
+        print(f"--- end of report on {self.book_name} ---")
 
 
 frankenstien = Book("/home/mcfuddy/workspace/github.com/McFuddy2/bookbot/books/frankenstein.txt", "Frankenstien")
 
-print(frankenstien.word_count())
+frankenstien.book_report()
